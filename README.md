@@ -49,6 +49,7 @@ curl -XPOST 'http://172.17.8.102:8080/v2/apps' -H 'Content-Type: application/jso
   },
   "cpus": 0.5,
   "mem": 256,
-  "instances": 1
+  "instances": 1, 
+  "constraints": [["hostname", "CLUSTER", "172.17.8.102"]]
 }'
 ```
