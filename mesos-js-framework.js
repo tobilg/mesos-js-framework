@@ -1,9 +1,10 @@
 "use strict";
 var java = require("java");
+var path = require("path");
 
 // Configure classpath
-java.classpath.push("./libs/mesos-0.27.2.jar");
-java.classpath.push("./libs/protobuf-java-2.5.0.jar");
+java.classpath.push(path.join(__dirname, "./libs/mesos-0.27.2.jar"));
+java.classpath.push(path.join(__dirname, "./libs/protobuf-java-2.5.0.jar"));
 
 // Check if MESOS_ZK_CONNECTION is present
 if (!process.env.MESOS_ZK_CONNECTION || !process.env.LIBPROCESS_IP) {

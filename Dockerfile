@@ -24,17 +24,15 @@ RUN wget --no-check-certificate https://nodejs.org/dist/$NODE_VERSION/node-$NODE
     rm node-$NODE_VERSION-linux-x64.tar.gz
 
 # Add mesos-js-framework files
-ADD entrypoint.sh entrypoint.sh
 ADD mesos-js-framework.js $APP_BASE_PATH/
 ADD package.json $APP_BASE_PATH/
 ADD ./lib $APP_BASE_PATH/lib
 ADD ./libs $APP_BASE_PATH/libs
 
 # Setup of the mesos-js-framework
-RUN chmod +x entrypoint.sh && \
-    cd $APP_BASE_PATH && \
+RUN cd $APP_BASE_PATH && \
     chmod +x mesos-js-framework.js && \
     npm install -g node-gyp && \
     npm install
 
-ENTRYPOINT ["./entrypoint.sh"]
+CMD ["node", "/app/mesos-js-framework.js"]

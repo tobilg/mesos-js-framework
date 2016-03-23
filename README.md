@@ -37,7 +37,8 @@ You should then see the framework in the Mesos master's framework page.
 curl -XPOST 'http://172.17.8.102:8080/v2/apps' -H 'Content-Type: application/json' -d '{
   "id": "mesos-js-framework",
   "env": {
-      "MESOS_ZK_CONNECTION": "zk://172.17.8.101:2181,172.17.8.102:2181,172.17.8.103:2181/mesos"
+      "MESOS_ZK_CONNECTION": "zk://172.17.8.101:2181,172.17.8.102:2181,172.17.8.103:2181/mesos",
+      "LIBPROCESS_IP": "172.17.8.102"
   },
   "container": {
     "type": "DOCKER",
