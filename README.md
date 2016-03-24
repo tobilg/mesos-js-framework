@@ -1,5 +1,9 @@
 # mesos-js-framework
-The project is a proof-of-concept implementation of a Mesos framework in Javascript via the fabulous [node-java](https://github.com/joeferner/node-java) Java bridge.
+This project is a proof-of-concept implementation of a Mesos framework in JavaScript via the fabulous [node-java](https://github.com/joeferner/node-java) bridge.
+It will start three [tobilg/docker-mini-webserver](https://github.com/tobilg/docker-mini-webserver) Docker images as tasks on the Mesos cluster.
+
+### Status
+This framework is for demo purposes only, and just meant to show that it's possible to write a Mesos framework in JavaScript via a JNI bridge.
 
 ## Installation
     
