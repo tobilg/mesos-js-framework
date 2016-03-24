@@ -17,6 +17,7 @@ You can test this via Vagrant and the [tobilg/coreos-mesos-cluster](https://gith
 This will expose the adresses `172.17.8.101`, `172.17.8.102` and `172.17.8.103`. To connect the framework to the cluster, you can use the Mesos master URL `zk://172.17.8.101:2181,172.17.8.102:2181,172.17.8.103:2181/mesos`. 
 
 ### Running the framework locally
+Before you can test the framework, please make sure that you have Mesos 0.27.x installed. The framework needs the `libmesos.so` library to be available either on the path or via the `MESOS_NATIVE_JAVA_LIBRARY` environment variable. 
 You need to make sure that the `LIBPROCESS_IP` is set to a reachable IP address on you local machine, e.g. on Mac OS via
 
     export LIBPROCESS_IP=$(ipconfig getifaddr en0)
