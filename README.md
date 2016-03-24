@@ -14,7 +14,7 @@ The project is a proof-of-concept implementation of a Mesos framework in Javascr
 ## Running
 You can test this via Vagrant and the [tobilg/coreos-mesos-cluster](https://github.com/tobilg/coreos-mesos-cluster) project, which starts a three node CoreOS cluster with ZooKeeper 3.4.6, Mesos 0.27.0 (masters and slaves) and Marathon.
 
-This will expose the adresses `172.17.8.101`, `172.17.8.102` and `172.17.8.103`. To connect the framework to the cluster, you can use the Mesos master URL `zk://172.17.8.101:2181,172.17.8.102:2181,172.17.8.103:2181/mesos`. 
+This will expose the addresses `172.17.8.101`, `172.17.8.102` and `172.17.8.103`. To connect the framework to the cluster, you can use the Mesos master URL `zk://172.17.8.101:2181,172.17.8.102:2181,172.17.8.103:2181/mesos`. 
 
 ### Running the framework locally
 Before you can test the framework, please make sure that you have at least a JDK (version 7 or 8) and Mesos 0.27.x installed. The framework needs the `libmesos.so` library to be available either on the path or via the `MESOS_NATIVE_JAVA_LIBRARY` environment variable. 
